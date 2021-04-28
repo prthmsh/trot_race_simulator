@@ -27,7 +27,7 @@ Docker compose file is placed in root of the repo. User need to navigate to root
 
 ```sh
 $ cd trot_race_simulator
-$ docker-compose up
+$ docker-compose up -d
 ```
 
 This will create running container of MongoDB and pull in the necessary dependencies.
