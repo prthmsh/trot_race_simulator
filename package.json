@@ -4,7 +4,7 @@
   "description": "node.js trot race simulator",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon --exec npm run clean",    
+    "start": "nodemon --exec npm run clean",
     "clean": "rimraf dist && npm run dev",
     "dev": "npm run build && node dist/app.js --no-warnings",
     "build": "babel src -d dist",

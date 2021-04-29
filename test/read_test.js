@@ -23,9 +23,9 @@ describe('Reading test', () => {
 			})
 	})
 
-	afterEach(function(done){
-    Test.collection.drop()
-    done()
+	afterEach(function (done) {
+		Test.collection.drop()
+		done()
 	})
-	
+
 })

@@ -14,9 +14,9 @@ describe('Creating documents', () => {
 			})
 	})
 
-	afterEach(function(done){
-    Test.collection.drop()
-    done()
+	afterEach(function (done) {
+		Test.collection.drop()
+		done()
 	})
-	
+
 })

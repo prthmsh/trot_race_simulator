@@ -37,7 +37,7 @@ let checkSession = async () => {
 let results = async () => {
 	try {
 		let bearerToken = await checkSession()
-		console.log('token -> ', JSON.stringify(bearerToken))
+		// console.log('token -> ', JSON.stringify(bearerToken))
 		const response = await got(`${process.env.SERVER}/results`, {
 			headers: {
 				'Authorization': `Bearer ${bearerToken.token}`
@@ -48,8 +48,8 @@ let results = async () => {
 		return response
 	} catch (err) {
 		if (err.HTTPError.includes(401)) {
-			 myCache.set('token', await auth())
-			 results()
+			myCache.set('token', await auth())
+			results()
 		}
 		console.error('results error')
 		console.error(err)

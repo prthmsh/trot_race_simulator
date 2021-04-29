@@ -4,7 +4,7 @@ const Test = require('../src/model/test_model')
 
 describe('Deleting a test', () => {
 
-	beforeEach(function(done) {
+	beforeEach(function (done) {
 		const test = new Test({
 			name: 'test'
 		})
@@ -37,9 +37,9 @@ describe('Deleting a test', () => {
 			})
 	})
 
-	afterEach(function(done){
-    Test.collection.drop()
-    done()
+	afterEach(function (done) {
+		Test.collection.drop()
+		done()
 	})
-	
+
 })

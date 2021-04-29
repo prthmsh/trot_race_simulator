@@ -8,7 +8,7 @@ const restCall = require('./service/RestCall')
 let race = () => {
 	restCall.results()
 		.then((result) => {
-			console.log(result.statusCode, '-', JSON.stringify(result.body))
+			console.log(result.statusCode, JSON.stringify(result.body))
 			if (result.statusCode === 200) {
 				let db = new MongoDb()
 				return db.save(result.body)
